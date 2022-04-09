@@ -9,7 +9,7 @@ async function handler(req: Request): Promise<Response> {
      method: "POST",
     headers: {
        "content-type": "application/json",
-       "x-sfsql-apikey":"YfvGrfalI2qmGA2xQPMr4Zl1SMX9UIfbcI6AmhPaXpzcwKW9QJ4c0ttRyGv8Ruvk"
+       "x-sfsql-apikey": Deno.env.get('api_key')
     },
     body: JSON.stringify([
 	{
