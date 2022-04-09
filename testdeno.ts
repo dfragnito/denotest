@@ -11,7 +11,7 @@ async function handler(req: Request): Promise<Response> {
        "content-type": "application/json",
        "x-sfsql-apikey": Deno.env.get('api_key')
     },
-    body: JSON.stringify(Deno.readFile)
+    body: JSON.stringify(await Deno.readFile)
   });
   return new Response(resp.body, {
     status: resp.status,
