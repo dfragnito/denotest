@@ -13,7 +13,7 @@ async function handler(req: Request): Promise<Response> {
     body: JSON.stringify(data)
   });
   return new Response(JSON.stringify(resp.body), {
-    status: resp.status,
+    //status: resp.status,
     headers: {
       "content-type": "application/json",
     },
