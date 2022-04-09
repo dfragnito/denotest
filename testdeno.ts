@@ -11,53 +11,7 @@ async function handler(req: Request): Promise<Response> {
        "content-type": "application/json",
        "x-sfsql-apikey": Deno.env.get('api_key')
     },
-    body: JSON.stringify([
-	{
-		"*delete": {
-			"objfilter": "SELECT $o:Person.attrset('delete')",
-			"_comment": "prepare example by marking previous root Person objects and all their children as 'deleted'"
-		}
-	},
-	{
-		"*purge": {},
-		"_comment": "purge all objects marked for deletion."
-	},
-	{
-		"modify": {
-			"data": {
-				"Person": [
-					{
-						"#append": {}
-					},
-					{
-						"fname": "Andy",
-						"lname": "Smith",
-						"age": 30
-					},
-					{
-						"fname": "Bob",
-						"lname": "Jones",
-						"age": 55
-					}
-				]
-			},
-			"_comment": "Add 2 Person objects"
-		}
-	},
-	{
-		"query": {
-			"sfsql": "SELECT $o:Person.oid() as 'oid', $s:Person.fname as 'fname', $s:Person.lname as 'lname', $i:Person.age as 'age'",
-			"_comment": "Query the oid, fname, lname and age of the added Persons"
-		}
-	}
-]
-
-
-
-
-
-
-    )
+    body: JSON.stringify(Deno.readFile)
   });
   return new Response(resp.body, {
     status: resp.status,
