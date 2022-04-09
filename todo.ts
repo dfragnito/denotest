@@ -1,4 +1,4 @@
-import { listenAndServe } from "https://deno.land/std@0.114.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 
 import data from "./todo.json" assert { type: "json" };
 
