@@ -30,12 +30,12 @@ async function handler(req: Request): Promise<Response> {
 						"#append": {}
 					},
 					{
-						"fname": "Sue",
+						"fname": "Andy",
 						"lname": "Smith",
 						"age": 30
 					},
 					{
-						"fname": "Tom",
+						"fname": "Bob",
 						"lname": "Jones",
 						"age": 55
 					}
