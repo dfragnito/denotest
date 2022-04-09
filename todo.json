@@ -1,7 +1,7 @@
 [
 	{
 		"query": {
-			"sfsql": "SELECT $o:TODOS.todo.oid() as todo_id,$s:TODOS.todo.title as title,$s:TODOS.todo.status as status  WHERE $s:TODOS.todo.status <> 'HIDDEN' ORDER BY 'todo_id' DESC"
+			"sfsql": "SELECT $o:TODOS.todo.oid() as todo_id,$s:TODOS.todo.title as title,$s:TODOS.todo.status as status"
 		}
 	}
 ]
