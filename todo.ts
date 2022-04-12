@@ -1,8 +1,7 @@
 import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 import data from "./todo.json" assert { type: "json" };
-import data from "./todo.json" assert { type: "json" };
 async function handler(req: Request): Promise<Response> {
-  const resp = await fetch("https://staging.demo.api.sfsql.io/w9p8eajl/api/v1/run", {
+  const resp = await fetch("https://staging.demo.api.sfsql.io/ijhe3q1p/api/v1/run", {
     // The init object here has an headers object containing a
     // header that indicates what type of response we accept.
     // We're not specifying the method field since by default
