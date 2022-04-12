@@ -49,8 +49,7 @@ async function handler(req: Request): Promise<Response> {
 			"_comment": "Query the oid, fname, lname and age of the added Persons"
 		}
 	}
-]
-    )
+] )
   });
   return new Response(resp.body, {
     status: resp.status,
