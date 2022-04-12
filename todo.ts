@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 
 import data from "./todo.json" assert { type: "json" };
 
-async function handleRequest(_request) {
+async function handler(_request) {
   
   const response = await fetch("https://staging.api.sfsql.io/ijhe3q1p/api/v1/run", {
     method: "POST",
